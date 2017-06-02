@@ -1,10 +1,12 @@
-foo: bar
+security:
+  basic:
+    enabled: false
 
----
-spring:
-  profiles: cloud
-eureka:
-  instance:
-    hostname: ${vcap.application.uris[0]}
-    nonSecurePort: 80
+management:
+  security:
+    enabled: false
 
+logging:
+  level:
+    io:
+      pivotal: DEBUG
